@@ -7,12 +7,12 @@ import java.sql.*;
  */
 public class SimpleJdbcExample1 {
     public static void main(String[] args) {
-        try (Connection connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/testdb", "postgres", "postgres")) {
-            Statement statement = connection.prepareStatement("Select name from students");
+        try (Connection connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/test", "bbb1991", "")) {
+            Statement statement = connection.prepareStatement("select surname, firstname from person");
             ResultSet resultSet = statement.getResultSet();
 
             while (resultSet.next()) {
-                System.out.println(resultSet.findColumn("name"));
+                System.out.println(resultSet.findColumn("surname") + " " + resultSet.findColumn("firstname"));
             }
         } catch (SQLException e) {
             e.printStackTrace();
