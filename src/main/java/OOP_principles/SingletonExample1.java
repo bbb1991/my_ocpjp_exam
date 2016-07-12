@@ -2,6 +2,10 @@ package OOP_principles;
 
 import java.io.FileInputStream;
 import java.util.Properties;
+/**
+ * Реализация простой версий паттерна Singleton. 
+ * Является потоконебезопасным.
+ */
 
 public class SingletonExample1 {
 
@@ -32,6 +36,7 @@ class Settings {
                 instance = new Settings(Difficult.valueOf(properties.getProperty("Difficult")));
             } catch (Exception e) {
                 instance = new Settings(Difficult.MEDIUM);
+                System.out.println("Error while reading property file. Setting game difficult level MEDIUM");
             }
         }
         return instance;

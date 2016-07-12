@@ -3,7 +3,7 @@ package jdbc;
 import java.sql.*;
 
 /**
- * Created by bbb1991 on 1/8/16.
+ * Пример простого подключения к БД
  */
 public class SimpleJdbcExample1 {
     public static void main(String[] args) {
