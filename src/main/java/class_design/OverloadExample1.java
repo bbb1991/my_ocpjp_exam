@@ -4,11 +4,21 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 
 /*
- переопределение (overloading)  метод с таким же именем, но с другими аргументами
+ переопределение (overloading). метод с таким же именем, но с другими аргументами
  пример:
+ 
  public void test(int i)
  public void test(String s)
-
+ 
+ не будет компилироваться, если отличается только возвразаемый тип или модификатор доступа или другие ключевые слова:
+ int foo(String s)
+ double foo(String s)
+ ------------------
+ public void doStuff()
+ private void doStuff()
+ ------------------------------
+ public void doSomething()
+ public final void doSomething()
  */
 public class OverloadExample1 {
 
